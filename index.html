@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>Beach Run</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="controls">
+    <div class="pad-group" id="move-pad">
+      <button class="pad-btn" id="btn-left" data-action="left" aria-label="Move left">◀</button>
+      <button class="pad-btn" id="btn-right" data-action="right" aria-label="Move right">▶</button>
+    </div>
+    <div class="pad-group" id="action-pad">
+      <button class="pad-btn" id="btn-jump" data-action="jump" aria-label="Jump">JUMP</button>
+      <button class="pad-btn" id="btn-shoot" data-action="shoot" aria-label="Shoot">◆ SHOOT</button>
+      <button class="pad-btn" id="btn-dash" data-action="dash" aria-label="Dash">➤</button>
+    </div>
+  </div>
+
+  <div id="hud">
+    <span class="hud-level">Level <span id="level-count">1</span></span>
+    <span class="hud-coin">🪙 <span id="coin-count">0/<span id="coin-total">10</span></span></span>
+    <span class="hud-lives">❤️ <span id="lives-count">3</span></span>
+  </div>
+
+  <div id="bossbar" class="hidden">
+    <span id="boss-label">BOSS</span>
+    <div id="boss-track"><div id="boss-fill"></div></div>
+    <span id="boss-hp"></span>
+  </div>
+
+  <div id="overlay" class="hidden">
+    <div id="overlay-msg"></div>
+    <button id="restart">Play again</button>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
